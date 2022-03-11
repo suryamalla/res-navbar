@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+height: 80px;
+background: #1b1b1b;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding:0px 50px 0px 100px;
+}
+
+nav .logo{
+    font-size: 33px;
+    color: white;
+    font-weight: 600;
+}
+
+nav ul{
+display: flex;
+list-style: none;
+justify-content: space-between;
+}
+
+nav ul li{
+    margin: 0 8px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+    font-family: cursive;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 34px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color: #1b1b1b;
+    background-color: #fff;
+}
+
+nav .menu-btn{
+    cursor: pointer;
+    display: none;
+}
+
+
+/* for making responsive to the navigation bar */
+
+@media(max-width: 1040px){
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    #click:checked ~ ul{
+        left: 0%;
+    }
+
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+    }
+
+
+    nav ul li{
+        margin:40px 0;
+    }
+
+
+nav ul li a:hover,
+nav ul li a.active{
+    color: cyan;
+    background-color: #111;
+    }
+
+nav .menu-btn{
+    display: block;
+    }
+
+}
+.cb{
+    margin: 50px;
+    border: 2px solid black;
+    width: 30px;
+    cursor: pointer;
+}
+.ab{
+margin: 4px;
+    border-bottom: 5px solid black;
+    width: 20px;
+}
